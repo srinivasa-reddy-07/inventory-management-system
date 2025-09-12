@@ -1,0 +1,72 @@
+<div class="page" data-page="promotions" >
+    <div class="page-header">
+        <div class="page-icon">🏷️</div>
+        <h2>Promotions</h2>
+    </div>
+
+    <div class="grid-container">
+        <div class="section admin-only fade-in">
+            <form id="addPromotionForm">
+                <h3>Add Simple Promotion</h3>
+                <div class="form-group">
+                    <input type="text" id="promoDescription" placeholder="Promotion Description" required>
+                </div>
+                <div class="form-group">
+                    <select id="promoType" required>
+                        <option value="">Select Promotion Type</option>
+                        <option value="PERCENTAGE">Percentage Discount</option>
+                        <option value="FIXED_AMOUNT">Fixed Amount Off</option>
+                        <option value="BOGO">Buy-One-Get-One</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <input type="number" id="promoValue" placeholder="Discount Value" step="0.01" required>
+                </div>
+                <div class="form-group">
+                    <input type="number" id="promoProductId" placeholder="Product ID" required>
+                </div>
+                <button type="submit">Add Promotion</button>
+            </form>
+        </div>
+
+        <div class="section admin-only fade-in">
+            <form id="addTieredPromotionForm">
+                <h3>Add Tiered Promotion</h3>
+                <div class="form-group">
+                    <input type="text" id="tieredPromoDesc" placeholder="Promotion Description" required>
+                </div>
+                <div class="form-group">
+                    <input type="number" id="tieredPromoProductId" placeholder="Product ID" required>
+                </div>
+                <div class="tier-input-group">
+                    <h4>Configure Pricing Tiers</h4>
+                    <div class="tier-controls">
+                        <input type="number" id="tierMinQty" placeholder="Min Quantity">
+                        <input type="number" id="tierPrice" placeholder="Price Per Item" step="0.01">
+                        <button type="button" id="addTierBtn">Add Tier</button>
+                    </div>
+                    <ul id="currentTiersList"></ul>
+                </div>
+                <button type="submit">Create Tiered Promotion</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="section fade-in" style="grid-column: 1 / -1;">
+        <h3>All Promotions</h3>
+        <div class="table-container">
+            <table id="promotionsTable">
+                <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Description</th>
+                    <th>Type</th>
+                    <th>Details</th>
+                    <th>Product</th>
+                </tr>
+                </thead>
+                <tbody id="promotionsTbody"></tbody>
+            </table>
+        </div>
+    </div>
+</div>

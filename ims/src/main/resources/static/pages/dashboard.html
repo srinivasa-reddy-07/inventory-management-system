@@ -1,0 +1,29 @@
+<div class="page active" data-page="dashboard">
+    <div class="page-header">
+        <div class="page-icon">📊</div>
+        <h2>Dashboard</h2>
+    </div>
+
+    <div class="alerts">
+        <h3>⚠️ Low Stock Alerts (Below 10)</h3>
+        <ul id="lowStockAlerts"></ul>
+    </div>
+
+    <div id="dashboardStats">
+        <div class="stat-card">
+            <div class="stat-icon">📦</div>
+            <div class="stat-label">Total Products</div>
+            <div class="stat-value"><span id="totalProducts">...</span></div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-icon">💰</div>
+            <div class="stat-label">Total Inventory Value</div>
+            <div class="stat-value">$<span id="totalValue">...</span></div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-icon">🛒</div>
+            <div class="stat-label">Pending Orders</div>
+            <div class="stat-value"><span id="pendingOrders">...</span></div>
+        </div>
+    </div>
+</div>
